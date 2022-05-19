@@ -1,0 +1,42 @@
+.header {
+  min-height: 30rem;
+  background-image: url('../images/jared-rice-large.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  display: grid;
+  place-content: center;
+  grid-template-columns: minmax(0, 45rem);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.63);
+  }
+
+  .header-banner {
+    position: relative;
+    color: #fff;
+    z-index: 222;
+    text-align: center;
+
+    letter-spacing: 3px;
+    padding: 0 1rem;
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-transform: uppercase;
+      margin-bottom: 0.25em;
+    }
+    p {
+      font-size: clamp(0.7rem, 1.5vw, 1rem);
+      font-weight: 500;
+    }
+  }
+}
